@@ -3,6 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { AuthGuard } from '@auth0/auth0-angular';
 
+import { LayoutComponent } from './layout/layout.component';
+
 const routes: Routes = [
   {
     path: '',
@@ -14,10 +16,16 @@ const routes: Routes = [
     loadChildren: () => import ('./login/login.module').then(m => m.LoginModule)
   },
   {
-    path: 'home',
-    canActivate: [AuthGuard],
-    loadChildren: () => import ('./home/home.module').then(m => m.HomeModule)
-  }
+    path: '',
+    component: LayoutComponent,
+    children: [
+      {
+        path: 'home',
+        canActivate: [AuthGuard],
+        loadChildren: () => import ('./home/home.module').then(m => m.HomeModule)
+      }
+    ]
+  },
 ];
 
 @NgModule({
