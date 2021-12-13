@@ -14,3 +14,8 @@
             margin: 0px 6px 0px 6px;
         }
 }
+@media screen and (max-width:600px) {
+    .content-name {
+        display: none;
+    }
+}
