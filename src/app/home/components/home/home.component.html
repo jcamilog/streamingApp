@@ -1,1 +1,17 @@
-<p>home works!</p>
+<div class="content">
+    <div class="cards-grid">
+        <mat-card class="card" *ngFor="let movie of movies.entries">
+            <mat-card-header>
+              <mat-card-title>{{movie.title}}</mat-card-title>
+              <mat-card-subtitle>{{movie.programType}}</mat-card-subtitle>
+            </mat-card-header>
+            <img mat-card-image src="{{movie.images.PosterArt.url}}" alt="{{movie.title}}">
+            <mat-card-content>
+              <p>
+                {{movie.description}}
+              </p>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>
+
