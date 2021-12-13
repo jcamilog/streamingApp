@@ -1312,9 +1312,12 @@ export class HomeComponent implements OnInit {
       }
     ]
   };
+  public filterMovie =  '';
   constructor() { }
 
   ngOnInit(): void {
+    
   }
+
 
 }

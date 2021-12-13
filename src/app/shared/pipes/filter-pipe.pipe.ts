@@ -5,8 +5,15 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class FilterPipePipe implements PipeTransform {
 
-  transform(value: unknown, ...args: unknown[]): unknown {
-    return null;
+  transform(value: any, ...arg: any): any {
+    if(arg === '' ) return value
+    const resultMovie = [];
+    for(const movies of value) {
+      if(movies.title.toLowerCase().indexOf(arg) > -1) {
+        resultMovie.push(movies)
+      }
+    }
+    return resultMovie;
   }
 
 }
