@@ -20,4 +20,7 @@ export class AuthServiceService {
   getUserInfo() {
     return this.auth0.user$;
   }
+  isAuthenticated() {
+    return this.auth0.isAuthenticated$;
+  }
 }

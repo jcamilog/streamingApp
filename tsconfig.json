@@ -25,6 +25,7 @@
       "@material/*":["src/app/material/*"],
       "@shared/*": ["src/app/shared/*"],
       "@models/*": ["src/app/models/*"],
+      "@utils/*": ["src/app/utils/*"],
     }
   },
   "angularCompilerOptions": {
