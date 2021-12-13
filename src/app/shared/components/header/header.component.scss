@@ -1,0 +1,16 @@
+.spacer {
+    flex: 1 1 auto;
+};
+.title {
+    margin: 0;
+};
+.content-name {
+    display: flex;
+    align-items: center;
+        .welcome-name {
+            margin: 0;
+        }
+        .name { 
+            margin: 0px 6px 0px 6px;
+        }
+}

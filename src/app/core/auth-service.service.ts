@@ -17,4 +17,7 @@ export class AuthServiceService {
   logout() {
     return this.auth0.logout();
   }
+  getUserInfo() {
+    return this.auth0.user$;
+  }
 }
