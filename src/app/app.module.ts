@@ -6,10 +6,14 @@ import { AppComponent } from './app.component';
 
 import { AuthModule } from '@auth0/auth0-angular';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { LayoutComponent } from './layout/layout.component';
+
+import { SharedModule } from '@shared/shared.module';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LayoutComponent
   ],
   imports: [
     BrowserModule,
@@ -21,6 +25,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
       useRefreshTokens: true 
     }),
     BrowserAnimationsModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]
